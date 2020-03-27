@@ -1,2 +1,2 @@
-# bz-zootopia
+# Bronx Zoo Zootopia
 Zoo Updates and Content

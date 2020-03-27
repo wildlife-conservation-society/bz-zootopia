@@ -1,0 +1,22 @@
+// Breakpoints
+$break-desktop: '1150px';
+$break-mobile: '360px';
+$break-tablet: '767px';
+
+// Colors
+$blue: #1B71B2;
+$bright-green: #00CC5B;
+$gold: #85754E;
+$green: #36AD47;
+$orange: #E58A1F;
+$teal: #00A99A;
+$yellow: #FAFF00;
+
+// Fonts
+$fallbacks-sans: helvetica, arial, sans-serif;
+$fallbacks-serif: georgia, 'times new roman', serif;
+$font-brandon: 'Brandon Grotesque', $fallbacks-sans;
+$font-lato: 'Lato', $fallbacks-sans;
+
+// Transitions
+$default-transition: all 0.2s ease-out;
