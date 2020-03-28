@@ -1,0 +1,18 @@
+h2, h3 {
+	font-family: $font-brandon;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: $green;
+	font-size: 3.375rem;
+	line-height: 3.375rem;
+}
+
+h3 {
+	color: $gold;
+	font-size: 1rem;
+	line-height: 1rem;
+}

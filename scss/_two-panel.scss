@@ -1,0 +1,76 @@
+.zootopia {
+	&-two-panel {
+		background: $blue;
+		
+		&--classroom {
+			.zootopia-two-panel__image {
+				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/27/5pisfl744z_Julie_Larsen_Maher_7006_LIttle_Zoo_Vets_Education_BZ_07_15_15_1.jpg');
+				background-position: center center;
+				background-size: cover;
+				min-height: 700px;
+				
+				@media all and (max-width:$break-desktop) {
+					min-height: 500px;
+				}
+			}
+		}
+		
+		&__content {
+			display: inline-block;
+			padding: 80px;
+			vertical-align: top;
+			width: 50%;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				width: 100%;
+			}
+			
+			@media all and (max-width:$break-tablet) {
+				padding: 50px;
+			}
+		}
+		
+		h2, h3 {
+			color: #fff;
+			max-width: 500px;
+			
+			@media all and (max-width:$break-desktop) {
+				max-width: 100%;
+			}
+		}
+		
+		h2 {
+			margin: 0 auto 30px;
+		}
+		
+		h3 { 
+			margin: 0 auto 15px;
+		}
+		
+		&__image {
+			display: inline-block;
+			vertical-align: top;
+			width: calc(50% - 5px);
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				width: 100%;
+			}
+		}
+		
+		p {
+			color: #fff;
+			margin: 0 auto 40px;
+			max-width: 500px;
+			
+			@media all and (max-width:$break-desktop) {
+				max-width: 100%;
+			}
+				
+			&:last-of-type {
+				margin: 0 auto;
+			}
+		}
+	}
+}
