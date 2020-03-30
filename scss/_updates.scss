@@ -81,6 +81,12 @@
 				margin: 0 0 0 5px;
 				vertical-align: middle;
 				
+				&:first-of-type {
+					@media all and (max-width:$break-desktop) {
+						display: none;
+					}
+				}
+				
 				a {
 					transition: $default-transition;
 					

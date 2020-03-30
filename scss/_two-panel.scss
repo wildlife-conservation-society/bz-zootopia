@@ -1,6 +1,8 @@
 .zootopia {
 	&-two-panel {
 		background: $blue;
+		display: table;
+		width: 100%;
 		
 		&--classroom {
 			h2, h3 {
@@ -13,18 +15,21 @@
 			
 			.zootopia-two-panel__image {
 				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/27/5pisfl744z_Julie_Larsen_Maher_7006_LIttle_Zoo_Vets_Education_BZ_07_15_15_1.jpg');
-				min-height: 700px;
 				
-				@media all and (max-width:$break-desktop) {
-					min-height: 500px;
+				&__spacer {
+					min-height: 700px;
+					
+					@media all and (max-width:$break-desktop) {
+						min-height: 500px;
+					}
 				}
 			}
 		}
 		
 		&__content {
-			display: inline-block;
+			display: table-cell;
 			padding: 80px;
-			vertical-align: top;
+			vertical-align: middle;
 			width: 50%;
 			
 			@media all and (max-width:$break-desktop) {
@@ -56,7 +61,7 @@
 		&__image {
 			background-position: center center;
 			background-size: cover;
-			display: inline-block;
+			display: table-cell;
 			vertical-align: top;
 			width: calc(50% - 5px);
 			
@@ -100,10 +105,13 @@
 			
 			.zootopia-two-panel__image {
 				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/30/3ctwyynpaa_Julie_Larsen_Maher_1384_Tassler_Heather_Keeper_with_Ringtailed_Lemurs_MAD_BZ_06_30_16_1.jpg');
-				min-height: 500px;
 				
-				@media all and (max-width:$break-desktop) {
-					min-height: 300px;
+				&__spacer {
+					min-height: 500px;
+					
+					@media all and (max-width:$break-desktop) {
+						min-height: 300px;
+					}
 				}
 			}
 		}
