@@ -1,0 +1,57 @@
+.zootopia {
+	&-support {
+		background: $green;
+		padding: 100px 0;
+		
+		@media all and (max-width:$break-tablet) {
+			padding: 40px;
+		}
+		
+		.block__description {
+			background: $blue;
+			padding: 20px;
+			position: relative;
+			top: -30px;
+			width: 95%;
+			
+			@media all and (max-width:$break-tablet) {
+				background: none;
+				top: 0px;
+			}
+			
+			&:hover {
+				h3, h4 {
+					opacity: .85;
+				}
+			}
+			
+			h3, h4 {
+				color: #fff;
+				transition: $default-transition;
+			}
+			
+			h4 {
+				font-size: .875rem;
+				line-height: .875rem;
+				margin: 0 0 7px;
+			}
+			
+			h3 {
+				font-size: 1.75rem;
+				line-height: 1.75rem;
+			}
+		}
+		
+		h2 {
+			color: #fff;
+			font-size: 2.0625rem;
+			line-height: 2.0625rem;
+			margin: 0 0 80px;
+			text-align: center;
+			
+			@media all and (max-width:$break-tablet) {
+				margin: 0 0 40px;
+			}
+		}
+	}
+}

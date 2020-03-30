@@ -20,6 +20,12 @@
 			transition: $default-transition;
 			width: calc(33.33% - 23px);
 			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				margin: 0 15px 30px;
+				width: calc(100% - 30px);
+			}
+			
 			&:nth-of-type(-n+3) {
 				max-height: 2000px;
 				opacity: 1;
@@ -28,10 +34,23 @@
 			&:nth-of-type(1),
 			&:nth-of-type(4n) {
 				margin: 15px 15px 15px 0;
+				
+				@media all and (max-width:$break-desktop) {
+					margin: 0 15px 30px;
+				}
 			}
 			
 			&:nth-of-type(3n) {
 				margin: 15px 0 15px 15px;
+				
+				@media all and (max-width:$break-desktop) {
+					margin: 0 15px 30px;
+				}
+			}
+			
+			.instagram-media {
+				margin: 0 auto !important;
+				min-width: 200px !important;
 			}
 			
 			&--is-visible {

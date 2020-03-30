@@ -1,0 +1,54 @@
+.zootopia {
+	&-zen {
+		margin: 140px 0;
+		
+		@media all and (max-width:$break-desktop) {
+			margin: 60px 0;
+		}
+		
+		&__content {
+			display: inline-block;
+			padding: 0 160px 0 0;
+			width: calc(50% - 10px);
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 0 40px 40px;
+				width: 100%;
+			}
+			
+			.btn {
+			    padding: 8px 28px 6px;
+			    
+				svg {
+					height: 28px;
+					position: relative;
+					top: -2px;
+					width: 28px;
+					vertical-align: middle;
+				}
+			}
+			
+			h2 {
+				margin: 20px 0;
+			}
+			
+			p {
+				margin: 40px 0 0;
+			}
+		}
+		
+		&__media {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 0 40px;
+				width: 100%;
+			}
+		}
+	}
+}
