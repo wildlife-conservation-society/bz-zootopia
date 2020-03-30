@@ -3,10 +3,16 @@
 		background: $blue;
 		
 		&--classroom {
+			h2, h3 {
+				max-width: 500px;
+			}
+			
+			p {
+				max-width: 500px;
+			}
+			
 			.zootopia-two-panel__image {
 				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/27/5pisfl744z_Julie_Larsen_Maher_7006_LIttle_Zoo_Vets_Education_BZ_07_15_15_1.jpg');
-				background-position: center center;
-				background-size: cover;
 				min-height: 700px;
 				
 				@media all and (max-width:$break-desktop) {
@@ -33,7 +39,6 @@
 		
 		h2, h3 {
 			color: #fff;
-			max-width: 500px;
 			
 			@media all and (max-width:$break-desktop) {
 				max-width: 100%;
@@ -49,6 +54,8 @@
 		}
 		
 		&__image {
+			background-position: center center;
+			background-size: cover;
 			display: inline-block;
 			vertical-align: top;
 			width: calc(50% - 5px);
@@ -62,7 +69,6 @@
 		p {
 			color: #fff;
 			margin: 0 auto 40px;
-			max-width: 500px;
 			
 			@media all and (max-width:$break-desktop) {
 				max-width: 100%;
@@ -70,6 +76,35 @@
 				
 			&:last-of-type {
 				margin: 0 auto;
+			}
+		}
+		
+		&--the-zoo {
+			h2 {
+				background-size: cover;
+				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2019/01/25/1tfx1zzmn1_logo_the_zoo.png');
+				height: 90px;
+				margin: 0 0 20px;
+				overflow: hidden;
+				text-indent: -99999px;
+				width: 196px;
+			}
+			
+			.zootopia-two-panel__content {
+				padding: 100px;
+				
+				@media all and (max-width:$break-desktop) {
+					padding: 60px;
+				}
+			}
+			
+			.zootopia-two-panel__image {
+				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/30/3ctwyynpaa_Julie_Larsen_Maher_1384_Tassler_Heather_Keeper_with_Ringtailed_Lemurs_MAD_BZ_06_30_16_1.jpg');
+				min-height: 500px;
+				
+				@media all and (max-width:$break-desktop) {
+					min-height: 300px;
+				}
 			}
 		}
 	}
