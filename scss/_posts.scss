@@ -19,6 +19,7 @@
 			opacity: 0;
 			transition: $default-transition;
 			width: calc(33.33% - 23px);
+			vertical-align: top;
 			
 			@media all and (max-width:$break-desktop) {
 				display: block;
