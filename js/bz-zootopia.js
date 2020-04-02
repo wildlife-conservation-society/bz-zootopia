@@ -10,6 +10,22 @@ $(function(){
 			$(this).addClass('zootopia-posts__entry--is-visible');
 		});
 	});
+	
+	
+	// Hide the live cams overnight
+	function setFeedStatus() {
+		var hour = new Date().getHours();
+		var camOfflineClass = 'zootopia-cams--offline';
+		
+		if(hour >= 16 || hour <= 10) {
+			$('.zootopia-cams').addClass(camOfflineClass);
+		} else {
+			$('.zootopia-cams').removeClass(camOfflineClass);
+		}	
+	}
+	
+	setFeedStatus();
+	setInterval(setFeedStatus,300000);
 });
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
