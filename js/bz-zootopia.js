@@ -16,8 +16,8 @@ $(function(){
 	function setFeedStatus() {
 		var hour = new Date().getHours();
 		var camOfflineClass = 'zootopia-cams--offline';
-		
-		if(hour >= 16 || hour <= 10) {
+								
+		if(hour >= 16 || hour <= 9) {
 			$('.zootopia-cams').addClass(camOfflineClass);
 		} else {
 			$('.zootopia-cams').removeClass(camOfflineClass);
