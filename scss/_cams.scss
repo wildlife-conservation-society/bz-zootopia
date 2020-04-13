@@ -8,6 +8,18 @@
 			padding: 60px 40px;
 		}
 		
+		&--down {
+			iframe {
+				display: none;
+			}
+			
+			img {
+				&:first-of-type {
+					display: block;
+				}
+			}
+		}
+		
 		&__feed {
 			display: inline-block;
 			width: calc(50% - 50px);
@@ -24,6 +36,18 @@
 				
 				@media all and (max-width:$break-desktop) {
 					margin: 0 0 40px;
+				}
+			}
+			
+			&--down {
+				iframe {
+					display: none;
+				}
+				
+				img {
+					&:first-of-type {
+						display: block;
+					}
 				}
 			}
 			
@@ -54,7 +78,9 @@
 			}
 			
 			img {
-				display: block;
+				&:last-of-type {
+					display: block;
+				}
 			}
 		}
 		

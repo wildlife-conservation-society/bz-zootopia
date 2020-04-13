@@ -1,0 +1,136 @@
+.zootopia {
+	&-zoodles {
+		padding: 100px 0;
+		
+		@media all and (max-width:$break-desktop) {
+			padding: 80px 40px;
+		}
+		
+		&__feature {
+			display: table-row;
+			
+			&__content {
+				border-radius: 0 6px 6px 0;
+				box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+				display: table-cell;
+				padding: 60px;
+				width: calc(35% - 10px);
+				vertical-align: top;
+				-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+				-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+				
+				@media all and (max-width:$break-desktop) {
+					border-radius: 0 0 6px 6px;
+					display: block;
+					padding: 30px;
+					width: 100%;
+				}
+				
+				h4 {
+					margin: 0 0 15px;
+				}
+			}
+			
+			&__media {
+				display: table-cell;
+				width: 65%;
+				
+				@media all and (max-width:$break-desktop) {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+		
+		h2, h3 {
+			text-align: center;
+		}
+		
+		h2 {
+			margin: 15px 0 60px;
+		}
+		
+		h4 {
+			color: $green;
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+		
+		&__previous {
+			border-top: 1px solid $green;
+			margin: 50px 0 0;
+			padding: 40px 0 0;
+			
+			h4 {
+				margin: 0 0 40px;
+			}
+			
+			&__thumb {
+				display: inline-block;
+				position: relative;
+				margin: 0;
+				max-height: 0;
+				opacity: 0;
+				overflow: hidden;
+				width: calc(25% - 27px);
+				vertical-align: top;
+				
+				@media all and (max-width:$break-desktop) {
+					width: calc(50% - 17px);
+					
+					&:nth-of-type(2n) {
+						margin: 0 0 30px !important;
+					}
+				}
+				
+				&::after {
+					background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cpath class='st0' d='M94,50.1c0,2.8-1.4,5.4-3.8,6.9l-65,40.6c-1.3,0.8-2.8,1.2-4.3,1.2c-4.5,0-8.1-3.6-8.1-8.1c0,0,0,0,0,0V9.5 c0-4.5,3.6-8.1,8.1-8.1c1.5,0,3,0.4,4.3,1.2l65,40.6C92.5,44.7,94,47.3,94,50.1z'/%3E%3C/svg%3E%0A");
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 22%;
+					content: '';
+					height: calc(100% - 40px);
+					left: 0;
+					opacity: .5;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+				
+				&:nth-of-type(-n+4) {
+					margin: 0 30px 0 0;
+					max-height: 1000px;
+					opacity: 1;
+				}
+				
+				&:nth-of-type(4n) {
+					margin: 0;
+				}
+				
+				img {
+					display: block;
+				}
+				
+				&--is-visible {
+					margin: 0 30px 30px 0;
+					max-height: 1000px;
+					opacity: 1;
+					
+					&:nth-of-type(4n) {
+						margin: 0 0 30px;
+					}
+				}
+				
+				span {
+					color: $gold;
+					font-family: $font-brandon;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: 1px;
+					line-height: 1rem;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
