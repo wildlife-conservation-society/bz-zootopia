@@ -2,6 +2,8 @@
 var $ = require('jquery');
 
 $(function(){
+	
+	// Show the hidden posts
 	$('.zootopia-posts .btn-large').on('click',function(e){
 		e.preventDefault();
 		$(this).addClass('btn-large--is-hidden');
@@ -11,6 +13,68 @@ $(function(){
 		});
 	});
 	
+	// Show the hidden zoodles
+	$('.zootopia-zoodles .btn-fill-tiger').on('click',function(e){
+		e.preventDefault();
+		$(this).closest('p').addClass('--is-hidden');
+		
+		$('.zootopia-zoodles__previous__thumb').each(function(){
+			$(this).addClass('zootopia-zoodles__previous__thumb--is-visible');
+		});
+	});
+	
+	// Load a Zoodle
+	$('.zootopia-zoodles__previous').on('click','.zootopia-zoodles__previous__thumb',function(e){
+		e.preventDefault();
+		var animal = $(this).attr('data-animal');
+		
+		//Load JSON
+		$.getJSON('https://s3.amazonaws.com/wcs-cms/bz-zootopia-zoodles.json',function(data){
+			data.forEach(function (item) {
+								
+				if (item.animal == animal) {
+					$('.zootopia-zoodles__feature__media iframe').attr('src',item.embed);
+					$('.zootopia-zoodles__feature__content h4').text(item.title);
+					$('.zootopia-zoodles__feature__content p').text(item.description);
+				}
+			});
+		});
+		
+		//Scroll Up 
+		var offset = $('.zootopia-zoodles__feature').offset();
+		var navOffset = $('header.-active').outerHeight();
+		var scrollPos = offset.top - navOffset;
+		$('html, body').animate({ scrollTop: scrollPos }, 250);
+	});
+	
+	// Load the Zoodles
+	function loadZoodles () {
+		var html = '';
+		var n = 0;
+		
+		//Load JSON
+		$.getJSON('https://s3.amazonaws.com/wcs-cms/bz-zootopia-zoodles.json',function(data){
+			data.forEach(function (item) {
+				html += '<a href="#" class="zootopia-zoodles__previous__thumb" data-animal="'+item.animal+'"><img src="'+item.thumb+'" alt="'+item.title+'"><span>'+item.title+'</span></a>';
+				
+				if (n == 0) {
+					$('.zootopia-zoodles__feature__media iframe').attr('src',item.embed);
+					$('.zootopia-zoodles__feature__content h4').text(item.title);
+					$('.zootopia-zoodles__feature__content p').text(item.description);
+				}
+				
+				n++;
+			});
+		}).done(function() {
+			$('.zootopia-zoodles__previous__container').html(html);
+			
+			if (n > 3) {
+				$('.zootopia-zoodles .btn-fill-tiger').closest('p').remnoveClass('--is-hidden');
+			}
+		});;
+	}
+	
+	loadZoodles();
 	
 	// Hide the live cams overnight
 	function setFeedStatus() {
