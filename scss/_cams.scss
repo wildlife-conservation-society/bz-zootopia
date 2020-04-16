@@ -93,6 +93,17 @@
 			max-width: 800px;
 			
 			&:first-of-type {
+				margin: 15px auto 0;
+			}
+			
+			&:nth-of-type(2) {
+				color: #8a8885;
+				margin: 15px auto 50px;
+			}
+		}
+		
+		&--park {
+			p:first-of-type {
 				margin: 15px auto 50px;
 			}
 		}

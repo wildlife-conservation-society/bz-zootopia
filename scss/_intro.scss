@@ -26,6 +26,15 @@
 				font-size: 1.15rem;
 				line-height: 2rem;
 			}
+			
+			&.type-small {
+				color: #8a8885;
+				font-family: $font-lato;
+				font-size: .85rem;
+				line-height: 1rem;
+				margin: 0 auto;
+				max-width: 800px;
+			}
 		}
 	}
 }
