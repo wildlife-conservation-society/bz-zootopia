@@ -3,6 +3,37 @@ var $ = require('jquery');
 
 $(function(){
 	
+	var params = extractParams(window.location.search.substring(1));
+	
+	//Extract params from url
+	function extractParams(url) {
+		url_dec = decodeURI(url);
+	    rawParams = url_dec.split("&");
+	    params = {}
+
+	    for (i = 0; i < rawParams.length; i++) {
+	        ft = rawParams[i].split("=");
+	        params[ft[0]] = ft[1]
+	    }
+
+	    return params;
+	}
+	
+	// Scroll to the AQ Section
+	if (params['facility'] != undefined) {
+		var offset = 0;
+		
+		if (params['facility'] == 'nya') {
+			offset = $('.zootopia-cams.fill-ocean').offset();
+		} else {
+			offset = $('.zootopia-cams.fill-cloud').offset();
+		}
+		
+		var navOffset = $('header.-active').outerHeight();
+		var scrollPos = offset.top - navOffset;
+		$('html, body').animate({ scrollTop: scrollPos }, 250);
+	}
+	
 	// Show the hidden posts
 	$('.zootopia-posts .btn-large').on('click',function(e){
 		e.preventDefault();
