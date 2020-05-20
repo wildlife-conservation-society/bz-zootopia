@@ -61,6 +61,10 @@
 			
 			p {
 				margin: 5px 0 0 !important;
+				
+				.type-small {
+					color: #8a8885;
+				}
 			}
 		}
 		
@@ -74,6 +78,19 @@
 		
 		h2 {
 			margin: 15px 0;
+		}
+		
+		&__intro {
+			color: #272b2d !important;
+			margin: 25px auto 0 !important;
+		}
+		
+		&__note {
+			color: #8a8885;
+			font-family: $font-lato !important;
+			font-size: 0.875rem !important;
+			line-height: 1.15rem !important;
+			margin: 15px auto 50px !important;
 		}
 		
 		&--offline {
@@ -99,6 +116,20 @@
 			&:nth-of-type(2) {
 				color: #8a8885;
 				margin: 15px auto 50px;
+			}
+		}
+		
+		&__sponsored {
+			color: #8a8885;
+			font-family: $font-lato !important;
+			font-size: 0.875rem !important;
+			line-height: 1.15rem !important;
+			margin: 15px auto 0 !important;
+			
+			img {
+				display: block;
+				margin: 0 auto 5px;
+				max-width: 225px;
 			}
 		}
 		
