@@ -1,5 +1,17 @@
 [
 	{
+		"animal": "toucan",
+		"title": "#9 Toucan",
+		"description": "We've got a new Zoodle for you and this time, we're drawing a Toco Toucan! Share your art with us by using #BronxZoodles.",
+		"embed": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbronxzoo%2Fvideos%2F866356210775646%2F&show_text=false",
+		"thumb": "https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/12/08/67y2xxse23_zoodle_toucan.jpg"
+	},{
+		"animal": "mandrill",
+		"title": "#8 Mandrill",
+		"description": "In honor of Boo at the Zoo and in celebration of the season, we proudly present a special, spooktacular Boo at the Zoodle! Grab your markers and crayons, and let's get drawing!",
+		"embed": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbronxzoo%2Fvideos%2F1079176495812494%2F&show_text=false",
+		"thumb": "https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/12/08/2rkpxcw8hg_zoodle_mandrill.jpg"
+	},{
 		"animal": "bison",
 		"title": "#7 Ameican Bison",
 		"description": "We can't wait to open the zoo! Before we welcome you back in person, here's another Zoodle to get you excited about one of our favorite animals: the American bison! #bronxzoodles",
