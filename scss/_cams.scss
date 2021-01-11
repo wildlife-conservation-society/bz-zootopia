@@ -1,11 +1,60 @@
 .zootopia {
 	&-cams {
-		border-bottom: 1px solid #e2e2e2;
-		padding: 80px 0;
-		text-align: center;
-		
-		@media all and (max-width:$break-desktop) {
-			padding: 60px 40px;
+		background: $teal;
+		margin: 60px 0 0;
+		padding: 0 0 50px;
+
+		hr {
+			background-color: #fff;
+			border: none;
+			color: #fff;
+			height: 1px;
+			margin: 60px 0 50px;
+		}
+
+		&__left {
+			display: inline-block;
+			padding: 0 30px 0 0;
+			text-align: left;
+			width: calc(50% - 5px);
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 0 20px;
+				width: 100%;
+			}
+			
+			h2 {
+				color: #fff;
+				margin: 10px 0 0;
+			}
+			
+			h3 {
+				color: $yellow;
+			}
+			
+			&--more-cams {
+				h3 {
+					color: #fff;
+					font-size: 1.5rem;
+					letter-spacing: 0.16em;
+					margin: 8px 0 0;
+					
+					@media all and (max-width:$break-desktop) {
+						text-align: center;
+					}
+				}
+			}
+			
+			&__sponsored {
+				img {
+					display: block;
+					margin: 0 5px;
+					max-width: 225px;
+				}
+			}
+
 		}
 		
 		&--down {
@@ -19,24 +68,42 @@
 				}
 			}
 		}
+
+		&__main {
+			margin: 0 0 -30px;
+			position: relative;
+			top: -60px;
+
+			&--down {
+				iframe {
+					display: none;
+				}
+				
+				img {
+					&:first-of-type {
+						display: block;
+					}
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+		}
 		
 		&__feed {
 			display: inline-block;
-			width: calc(50% - 50px);
+			margin-top: 10px;
+			text-align:center;
+			width: calc(50% - 5px);
 			vertical-align: top;
 			
 			@media all and (max-width:$break-desktop) {
 				display: block;
 				margin: 0 0 40px;
+				padding: 0px 20px !important;
 				width: 100%;
-			}
-			
-			&:first-of-type {
-				margin: 0 50px 50px 0;
-				
-				@media all and (max-width:$break-desktop) {
-					margin: 0 0 40px;
-				}
 			}
 			
 			&--down {
@@ -52,6 +119,7 @@
 			}
 			
 			h3 {
+				color:white;
 				margin: 20px 0 0;
 			}
 			
@@ -59,12 +127,35 @@
 				display: none;
 			}
 			
-			p {
-				margin: 5px 0 0 !important;
-				
-				.type-small {
-					color: #8a8885;
-				}
+			// p {	
+			// 	.type-small {
+			// 		color: white;
+			// 	}
+			// }
+
+			&__right {
+				padding-left:15px;
+			}
+
+			&__left {
+				padding-right:15px;
+			}
+		}
+
+		p {
+			color: #fff;
+		}
+		
+		&__right {
+			display: inline-block;
+			text-align: left;
+			width: 50%;
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 20px;
+				width: 100%;
 			}
 		}
 		
@@ -90,7 +181,8 @@
 			font-family: $font-lato !important;
 			font-size: 0.875rem !important;
 			line-height: 1.15rem !important;
-			margin: 15px auto 50px !important;
+			margin: 50px auto 50px !important;
+			text-align:center;
 		}
 		
 		&--offline {
@@ -116,20 +208,6 @@
 			&:nth-of-type(2) {
 				color: #8a8885;
 				margin: 15px auto 50px;
-			}
-		}
-		
-		&__sponsored {
-			color: #8a8885;
-			font-family: $font-lato !important;
-			font-size: 0.875rem !important;
-			line-height: 1.15rem !important;
-			margin: 15px auto 0 !important;
-			
-			img {
-				display: block;
-				margin: 0 auto 5px;
-				max-width: 225px;
 			}
 		}
 		

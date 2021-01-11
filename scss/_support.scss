@@ -5,6 +5,10 @@
 		
 		@media all and (max-width:$break-tablet) {
 			padding: 40px;
+
+			.block {
+				margin-bottom: 20px;
+			}
 		}
 		
 		.block__description {
@@ -52,6 +56,38 @@
 			
 			@media all and (max-width:$break-tablet) {
 				margin: 0 0 40px;
+			}
+		}
+
+		&--content {
+			margin: 0;
+			position: absolute;
+			padding: 0 60px 0 0;
+    		top: 50%;
+    		-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			
+			h2 {
+				margin-bottom: 15px;
+				text-align: left;
+			}
+
+			h3 {
+				color: white;
+				margin-bottom: 15px;
+			}
+
+			p {
+				color: white;
+				font-size: 1rem;
+			}
+
+			@media all and (max-width: $break-desktop) {
+				margin-bottom: 20px;
+				padding-right: 0px;
+				position: static;
+				transform: none;
+				-ms-transform: none;
 			}
 		}
 	}

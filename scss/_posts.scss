@@ -1,6 +1,7 @@
 .zootopia {
 	&-posts {
-		margin: -100px 0 40px;
+		margin: 70px 0 40px;
+		text-align:center;
 		
 		.btn-large {
 			transition: $default-transition;
@@ -59,10 +60,65 @@
 				opacity: 1;
 			}
 		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
 		
 		p {
-			margin: -25px 0 0;
+			// margin: -25px 0 0;
 			text-align: center;
 		}
+
+		&__social {
+			margin: 60px auto;
+			width: 60%;
+
+			@media all and (max-width: $break-tablet) {
+				margin-bottom: 0px;
+				width: 80%;
+			}
+
+			h2 {
+				font-size:2.0625rem;
+				line-height:2.0625rem;
+				margin-bottom: 10px;
+			}
+
+			ul {
+				margin-top: 15px;
+
+				li {
+					display: inline-block;
+					margin: 0 0 0 5px;
+					vertical-align: middle;
+					
+					&:first-of-type {
+						margin-left:0px;
+					}
+					
+					a {
+						transition: $default-transition;
+						
+						&:hover {
+							opacity: .8;
+						}
+					}
+
+					svg {
+						border: 1px solid $green;
+						border-radius: 100%;
+						fill: $green;
+						padding: 7px;
+
+						@media all and (max-width: $break-tablet) {
+							height: 42px;
+							width: 42px;
+						}
+					}
+				}
+			}
+		}
+
 	}
 }
