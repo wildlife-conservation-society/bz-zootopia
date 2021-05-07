@@ -92,6 +92,25 @@
 
 		}
 		
+		&__more {
+			margin: 50px 0 0;
+			text-align: center;
+			
+			&--visible {
+				.btn-large {
+					display: none;
+				}
+				
+				&.zootopia-cams__more .zootopia-cams__feed {
+					display: inline-block;
+				}
+			}
+			
+			.zootopia-cams__feed {
+				display: none;
+			}
+		}
+		
 		&__feed {
 			display: inline-block;
 			margin-top: 10px;
@@ -186,7 +205,7 @@
 		}
 		
 		&--offline {
-			iframe {
+			.zootopia-cams__feed__embed {
 				display: none;
 			}
 			

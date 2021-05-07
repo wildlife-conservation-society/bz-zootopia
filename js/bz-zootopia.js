@@ -107,6 +107,12 @@ $(function(){
 	
 	loadZoodles();
 	
+	// View More Cameras 
+	$('.zootopia-cams__more .btn-large').on('click',function(e){
+		e.preventDefault();
+		$('.zootopia-cams__more').addClass('zootopia-cams__more--visible');
+	});
+	
 	// Hide the live cams overnight
 	function setFeedStatus() {
 		var hour = new Date().getHours();
