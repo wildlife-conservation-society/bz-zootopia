@@ -1,0 +1,77 @@
+.zootopia {
+	&-social {
+		margin: 70px 0 40px;
+		padding: 0 20px;
+		text-align: center;
+		
+		&__left {
+			display: inline-block;
+			width: 45%;
+			
+			@media all and (max-width: $break-tablet) {
+				display: block;
+				width: 100%;
+			}
+			
+			iframe {
+				display: inline-block !important;
+			}
+		}
+
+		&__right {
+			display: inline-block;
+			margin: 150px auto;
+			width: calc(55% - 5px);
+			vertical-align: top;
+
+			@media all and (max-width: $break-tablet) {
+				display: block;
+				margin: 40px auto;
+				width: 100%;
+			}
+
+			h2 {
+				font-size:2.0625rem;
+				line-height:2.0625rem;
+				margin-bottom: 10px;
+			}
+
+			ul {
+				margin-top: 15px;
+
+				li {
+					display: inline-block;
+					margin: 0 0 0 20px;
+					vertical-align: middle;
+					
+					&:first-of-type {
+						margin-left:0px;
+					}
+					
+					a {
+						transition: $default-transition;
+						
+						&:hover {
+							opacity: .8;
+						}
+					}
+
+					svg {
+						border: 1px solid $green;
+						border-radius: 100%;
+						fill: $green;
+						height: 58px;
+						padding: 7px;
+						width: 58px;
+
+						@media all and (max-width: $break-tablet) {
+							height: 42px;
+							width: 42px;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

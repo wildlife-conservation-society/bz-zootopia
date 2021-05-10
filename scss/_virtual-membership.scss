@@ -1,0 +1,96 @@
+.zootopia {
+	&-virtual-membership {
+		background: $teal;
+		margin: 60px 0 0;
+		padding: 0 0 50px;
+		
+		&__left {
+			display: inline-block;
+			padding: 0 30px 0 0;
+			text-align: left;
+			width: calc(50% - 5px);
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 0 20px;
+				width: 100%;
+			}
+			
+			h2 {
+				color: #fff;
+				margin: 10px 0 0;
+			}
+			
+			h3 {
+				color: $yellow;
+			}			
+		}
+
+		&__main {
+			margin: 0 0 -30px;
+			position: relative;
+			top: -60px;
+
+			&--down {
+				iframe {
+					display: none;
+				}
+				
+				img {
+					&:first-of-type {
+						display: block;
+					}
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+		}		
+
+		p {
+			color: #fff;
+		}
+		
+		&__right {
+			display: inline-block;
+			text-align: left;
+			width: 50%;
+			vertical-align: top;
+			
+			@media all and (max-width:$break-desktop) {
+				display: block;
+				padding: 20px;
+				width: 100%;
+			}
+		}
+		
+		&.fill-ocean {
+			border-bottom: none;
+			
+			h2, h3, p {
+				color: #fff;
+			}
+		}
+		
+		h2 {
+			margin: 15px 0;
+		}
+		
+		p {
+			margin: 15px auto 0;
+			max-width: 800px;
+			
+			&:first-of-type {
+				margin: 15px auto 0;
+			}
+			
+			&:nth-of-type(2) {
+				color: #8a8885;
+				margin: 15px auto 50px;
+			}
+		}
+	}
+}

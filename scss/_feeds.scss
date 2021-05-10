@@ -1,0 +1,156 @@
+.zootopia {
+	&-feeds {
+		padding: 80px 0px;
+		
+		@media all and (max-width:$break-tablet) {
+			padding: 40px 0px;
+		}
+		
+		&__empty {
+			color: $dark-gray;
+			font-family: $font-brandon;
+			font-size: 1.25rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+			line-height: 1.5rem;
+			margin: 0 auto;
+			max-width: 500px;
+			text-align: center;
+			text-transform: uppercase;
+			
+			svg {
+				display: block;
+				fill: $dark-gray;
+				height: 80px;
+				margin: 0 auto 25px;
+				width: 80px;
+			}
+		}
+		
+		&__item {
+			background: #fff;
+			border-radius: 4px;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+			cursor: pointer;
+			display: inline-block;
+			margin: 25px;
+			overflow: hidden;
+			transition: $default-transition;
+			width: calc(50% - 52px);
+			vertical-align: top;
+			
+			@media all and (max-width:$break-tablet) {
+				margin: 25px;
+				width: 100%;
+			}
+			
+			a {
+				h2 {
+					&:hover {
+						color: $green-hover;
+					}
+				}	
+			}
+			
+			&--active {
+				display: block;
+				width: calc(100% - 52px);
+			}
+			
+			&__content {
+				padding: 30px;
+				text-align: center;
+				
+				h2, h3 {
+					font-family: $font-brandon;
+					font-weight: bold;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+				}
+				
+				h2 {
+					color: $green;
+					font-size: 1.875rem;
+					line-height: 1.875rem;
+					margin: 10px 0;
+					transition: $default-transition;
+				}
+				
+				h3 {
+					color: $gold;
+					font-size: 1rem;
+					line-height: 1rem;
+				}
+				
+				p {
+					color: $black;
+					
+					a {
+						color: $orange;
+						display: inline-block;
+						font-family: $font-brandon;
+						font-size: 1rem;
+						font-weight: bold;
+						letter-spacing: 1px;
+						line-height: 1rem;
+						margin: 25px 0 0;
+						text-transform: uppercase;
+						transition: $default-transition;
+						
+						&:hover {
+							color: $orange-hover;
+						}
+					}
+				}
+			}
+			
+			&__image {
+				background-position: center center;
+				background-size: cover;
+				position: relative;
+				
+				&::before {
+					content: '';
+					display: block;
+					padding-bottom: 56.25%;
+					width: 100%;
+				}
+				
+				iframe {
+					height: 100%;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+			}
+			
+			&__park {
+				background: $dark-teal;
+				color: #fff;
+				font-family: $font-brandon;
+				font-size: 1rem;
+				font-weight: bold;
+				letter-spacing: 2px;
+				line-height: 1rem;
+				padding: 10px 0;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+		
+		&__more {
+			background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2021/05/10/96epo1b1ky_noun_Hand_drawn_arrow_2930289_1.png');
+			background-position: right top;
+			background-repeat: no-repeat;
+			background-size: 33px 33px;
+			color: $orange;
+			font-family: $font-chantal;
+			font-size: 1.25rem;
+		    height: 28px;
+			line-height: 1.25rem;
+			margin: 0 40px -17px;
+		    padding: 0 37px 0 0;
+			text-align: right;
+		}
+	}
+}

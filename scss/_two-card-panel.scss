@@ -1,0 +1,146 @@
+.zootopia {
+	&-two-card-panel {
+		background: $blue;
+		display: table;
+		margin: 0 0 40px;
+		padding: 0 20px 20px;
+		position: relative;
+		top: 40px;
+		width: 100%;
+		
+		@media all and (max-width:$break-tablet) {
+			margin: 0;
+			padding: 40px 20px;
+			top: 0;
+		}
+		
+		&__card {
+			display: table-cell;
+			padding: 0 0 0 30px;
+			position: relative;
+			top: -40px;
+			width: 33.3333%;
+			
+			@media all and (max-width:$break-tablet) {
+				display: inline-block;
+				padding: 0;
+				top: 0;
+				width: 100%;
+				vertical-align: top;
+			}
+			
+			&__callout {
+				background: $orange;
+				color: #fff;
+				font-family: $font-brandon;
+				font-size: 1rem;
+				letter-spacing: 1px;
+				line-height: 1rem;
+				padding: 10px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			
+			&__content {
+				border-radius: 0 0 5px 5px;
+				min-height: 225px;
+				padding: 30px;
+				text-align: center;
+				
+				h3 a {
+					display: block;
+					font-size: 1.625rem;
+					line-height: 1.625rem;
+					margin:10px 0;
+				}
+				
+				h4 {
+					color: $gold;
+					font-family: $font-brandon;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: 1px;
+					line-height: 1rem;
+					text-transform: uppercase;
+				}
+				
+				p {
+					line-height: 1.65rem;
+					
+					&:last-of-type {
+						margin: 20px 0 0;
+					}
+					
+					a {
+						color: $orange;
+						font-family: $font-brandon;
+						font-size: 1rem;
+						font-weight: bold;
+						letter-spacing: 1px;
+						line-height: 1rem;
+						text-transform: uppercase;
+						transition: $default-transition;
+						
+						&:hover {
+							color: $orange-hover;
+						}
+					}
+				}
+			}
+			
+			&__image {
+				border-radius: 5px 5px 0 0;
+				display: block;
+				overflow: hidden;
+				
+				img {
+					display: block;
+				}
+			}
+			
+			&--last {				
+				@media all and (max-width:$break-tablet) {
+					margin: 20px 0 0 0;
+				}
+			}
+		}
+		
+		&__content {
+			display: table-cell;
+			vertical-align: middle;
+			width: calc(33.3333% - 60px);
+			
+			@media all and (max-width:$break-tablet) {
+				display: block;
+				margin: 0 0 40px;
+				text-align: center;
+				width: 100%;
+			}
+			
+			.btn {
+				background-color: #fff;
+				color: $orange;
+				margin: 20px 0 0;
+				
+				&:hover {
+					color: $orange-hover;
+				}
+			}
+			
+			h2 {
+				color: #fff;
+				font-family: $font-brandon;
+				font-size: 2.0625rem;
+				font-weight: bold;
+				letter-spacing: 2px;
+				line-height: 2.0625rem;
+				margin: 0 0 10px;
+				text-transform: uppercase;
+			}
+			
+			p {
+				color: #fff;
+			}
+		}
+	}
+}

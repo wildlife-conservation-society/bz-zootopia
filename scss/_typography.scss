@@ -16,3 +16,26 @@ h3 {
 	font-size: 1rem;
 	line-height: 1rem;
 }
+
+.header__title,
+.wysiwyg .type-display {
+	color: $green;
+	font-family: $font-brandon;
+	font-size: 3.375rem;
+	font-weight: bold;
+	line-height: 3.375rem;
+	margin: 60px 16px 24px;
+	text-transform: uppercase;
+	
+	@media all and (max-width:$break-tablet) {
+		font-size: 2.75rem;
+		line-height: 2.75rem;
+		margin: 60px 16px 16px;
+	}
+}
+
+.wysiwyg {
+	.type-display {
+		margin: 60px 16px 0;
+	}
+}

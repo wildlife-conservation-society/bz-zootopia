@@ -19,6 +19,53 @@ $(function(){
 	    return params;
 	}
 	
+	// Toggle a live came feed 
+	$('.zootopia-feeds__item__toggle').on('click',function(e){
+		e.preventDefault();
+		
+		var selectedFeed = $(this).closest('.zootopia-feeds__item').attr('data-feed');
+		var activeClass = 'zootopia-feeds__item--active';
+		
+		if ($('.zootopia-feeds__more').length) {
+			$('.zootopia-feeds__more').remove();
+		}
+		
+		$('.zootopia-feeds__item').each(function(){
+			var $currentFeed = $(this);
+			
+			if ($currentFeed.attr('data-feed') == selectedFeed) {
+				if ($currentFeed.hasClass(activeClass)) {
+					$currentFeed.removeClass(activeClass).find('p a').text('Watch Now');
+					$('iframe',$currentFeed).remove();
+				} else {
+					$currentFeed.addClass(activeClass).find('p a').text('Close');
+					$('.zootopia-feeds__item__image',$currentFeed).append('<iframe allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="'+selectedFeed+'" id="ae_iframe_ywovcsny"></iframe>');
+					  
+					if (selectedFeed.includes('ozolio')) {
+						$currentFeed.before('<div class="zootopia-feeds__more">Check out more content</div>');
+					}
+					  
+					setTimeout(function(){
+						var offset = 0;
+					
+						if ($('.zootopia-feeds__more').length) {
+							offset = $('.zootopia-feeds__more').offset();
+						} else {
+							offset = $currentFeed.offset();
+						}
+	
+						var navOffset = $('header.-active').outerHeight();
+						var scrollPos = offset.top - navOffset;
+						$('html, body').animate({ scrollTop: scrollPos }, 250);
+					},200);
+				 }
+			} else {
+				 $currentFeed.removeClass(activeClass).find('p a').text('Watch Now');
+				 $('iframe',$currentFeed).remove();
+			}
+		});
+	});
+	
 	// Scroll to the AQ Section
 	if (params['facility'] != undefined) {
 		var offset = 0;
@@ -100,7 +147,7 @@ $(function(){
 			$('.zootopia-zoodles__previous__container').html(html);
 			
 			if (n > 3) {
-				$('.zootopia-zoodles .btn-fill-tiger').closest('p').remnoveClass('--is-hidden');
+				$('.zootopia-zoodles .btn-fill-tiger').closest('p').removeClass('--is-hidden');
 			}
 		});;
 	}
