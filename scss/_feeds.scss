@@ -41,7 +41,7 @@
 			
 			@media all and (max-width:$break-tablet) {
 				margin: 25px;
-				width: 100%;
+				width: calc(100% - 52px);
 			}
 			
 			a {
@@ -108,19 +108,27 @@
 				background-position: center center;
 				background-size: cover;
 				position: relative;
-				
+								
 				&::before {
+					background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2021/05/11/6cheawhqad_play.png');
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 75px;
 					content: '';
 					display: block;
 					padding-bottom: 56.25%;
 					width: 100%;
 				}
 				
-				iframe {
+				iframe, img {
 					height: 100%;
 					position: absolute;
 					top: 0;
 					width: 100%;
+				}
+				
+				img {
+					display: none;
 				}
 			}
 			
@@ -151,6 +159,16 @@
 			margin: 0 40px -17px;
 		    padding: 0 37px 0 0;
 			text-align: right;
+		}
+		
+		&--offline {
+			.zootopia-feeds__item--active {
+				.zootopia-feeds__item__image {
+					img {
+						display: block;
+					}
+				}
+			}
 		}
 	}
 }

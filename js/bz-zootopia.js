@@ -22,8 +22,11 @@ $(function(){
 	// Toggle a live came feed 
 	$('.zootopia-feeds__item__toggle').on('click',function(e){
 		e.preventDefault();
-		
-		var selectedFeed = $(this).closest('.zootopia-feeds__item').attr('data-feed');
+		toggleFeed($(this));
+	});
+	
+	function toggleFeed($el) {
+		var selectedFeed = $el.closest('.zootopia-feeds__item').attr('data-feed');
 		var activeClass = 'zootopia-feeds__item--active';
 		
 		if ($('.zootopia-feeds__more').length) {
@@ -39,7 +42,7 @@ $(function(){
 					$('iframe',$currentFeed).remove();
 				} else {
 					$currentFeed.addClass(activeClass).find('p a').text('Close');
-					$('.zootopia-feeds__item__image',$currentFeed).append('<iframe allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="'+selectedFeed+'" id="ae_iframe_ywovcsny"></iframe>');
+					$('.zootopia-feeds__item__image',$currentFeed).prepend('<iframe allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="'+selectedFeed+'" id="ae_iframe_ywovcsny"></iframe>');
 					  
 					if (selectedFeed.includes('ozolio')) {
 						$currentFeed.before('<div class="zootopia-feeds__more">Check out more content</div>');
@@ -64,7 +67,7 @@ $(function(){
 				 $('iframe',$currentFeed).remove();
 			}
 		});
-	});
+	}
 	
 	// Scroll to the AQ Section
 	if (params['facility'] != undefined) {
@@ -163,13 +166,29 @@ $(function(){
 	// Hide the live cams overnight
 	function setFeedStatus() {
 		var hour = new Date().getHours();
-		var camOfflineClass = 'zootopia-cams--offline';
+		var $cams = $('.zootopia-cams');
+		var $feeds = $('.zootopia-feeds');
+		
+		if ($cams.length) {
+			var camOfflineClass = 'zootopia-cams--offline';
 								
-		if(hour >= 16 || hour <= 9) {
-			$('.zootopia-cams').addClass(camOfflineClass);
-		} else {
-			$('.zootopia-cams').removeClass(camOfflineClass);
-		}	
+			if(hour >= 16 || hour <= 9) {
+				$cams.addClass(camOfflineClass);
+			} else {
+				$cams.removeClass(camOfflineClass);
+			}		
+		}
+
+		if ($feeds.length) {
+			var camOfflineClass = 'zootopia-feeds--offline';
+								
+			if(hour >= 16 || hour <= 9) {
+				$feeds.addClass(camOfflineClass);
+			} else {
+				$feeds.removeClass(camOfflineClass);
+			}		
+		}
+		
 	}
 	
 	setFeedStatus();
