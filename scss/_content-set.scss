@@ -1,0 +1,112 @@
+.content-set {
+	background-color: $teal;
+    padding: 80px 40px 40px;
+    text-align: center;
+
+    @media all and (max-width: $break-tablet) {
+        text-align: left;
+        padding: 40px 15px 20px;
+    }
+
+    h2 {
+        color: white;
+        font-family: $font-brandon;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media all and (max-width: $break-mobile) {
+            text-align:left;
+            font-size: 1.7rem;
+        }
+    }
+		
+	&__block {
+		display: inline-block;
+		margin: 0 40px 40px 0;
+		width: calc(33.3333% - 45px);
+		vertical-align: top;
+			
+		@media all and (max-width:$break-tablet) {
+            position: relative;
+            margin-right: 0px;
+			margin-bottom: 8%;
+            width: 100%;
+        }
+			
+		&:last-of-type {
+			margin: 0 0 40px;
+		}
+			
+		&__image {
+			display: block;
+			height: auto;
+			position: relative;
+            width: 100%;
+            
+            @media all and (max-width:$break-tablet) {
+                display: inline-block;
+                width: 40%;
+            }
+		}
+			
+		&__title {
+			background-color: $orange;
+            padding: 20px;
+			position: relative;
+			top: -30px;
+            width: 95%;
+            text-align: left;
+            
+            @media all and (max-width:$break-tablet) {
+                background-color: transparent !important;
+                display: inline-block;
+                margin: 0;
+                margin-left: 40%;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+				width: 40%;
+			}
+				
+			h3 a {
+				color: #fff;
+				transition: all 0.2s ease-out;
+					
+				&:hover {
+					opacity: .85;
+				}
+			}
+				
+			h3 {
+                font-family: $font-brandon;
+                font-size: 1.65rem;
+                font-weight: bold;
+                letter-spacing: 3px;
+                line-height: 1.65rem;
+                max-width: 300px;
+                text-transform: uppercase;
+
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                }
+			}
+        }
+        
+        @media all and (max-width: $break-tablet) {
+            .figure {
+                background:none;
+            }
+        }
+    }
+    
+    p {
+	    color: #fff;
+	    margin: 0 0 40px;
+    }
+}

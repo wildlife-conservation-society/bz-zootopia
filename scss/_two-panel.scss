@@ -14,7 +14,7 @@
 			}
 			
 			.zootopia-two-panel__image {
-				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/04/01/723cy6i2ac_IMG_2949.jpg');
+				background-image: url('https://cdn.wcs.org/2020/04/01/723cy6i2ac_IMG_2949.jpg');
 				
 				&__spacer {
 					min-height: 700px;
@@ -37,7 +37,7 @@
 			}
 
 			.zootopia-two-panel__image {
-				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/08/18/fxkvdnh6u_Julie_Larsen_Maher_6737_Hoffman_s_Toe_toed_Sloth_WAC_BZ_07_11_18_1.png');
+				background-image: url('https://cdn.wcs.org/2020/08/18/fxkvdnh6u_Julie_Larsen_Maher_6737_Hoffman_s_Toe_toed_Sloth_WAC_BZ_07_11_18_1.png');
 				
 				&__spacer {
 					min-height: 500px;
@@ -113,10 +113,43 @@
 			}
 		}
 		
+		&--virtual-wild-encounters {
+			
+			.zootopia-two-panel__content {
+				padding: 150px;
+				
+				@media all and (max-width:$break-desktop) {
+					padding: 80px;
+				}
+				
+				@media all and (max-width:$break-tablet) {
+					padding: 50px;
+				}
+				
+				h2 {
+					font-size: 2.25rem;
+					line-height: 2.25rem;
+					letter-spacing: 0.05rem; 
+				}
+			}
+			
+			.zootopia-two-panel__image {
+				background-image: url('https://cdn.wcs.org/2025/04/04/15/16/16/bc624906-2fa6-45ef-a17a-8aed243e234b/bz-virutal-wild-encounters.jpg');
+				
+				&__spacer {
+					min-height: 500px;
+					
+					@media all and (max-width:$break-desktop) {
+						min-height: 300px;
+					}
+				}
+			}
+		}
+		
 		&--the-zoo {
 			h2 {
 				background-size: cover;
-				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2019/01/25/1tfx1zzmn1_logo_the_zoo.png');
+				background-image: url('https://cdn.wcs.org/2019/01/25/1tfx1zzmn1_logo_the_zoo.png');
 				height: 90px;
 				margin: 0 0 20px;
 				overflow: hidden;
@@ -133,7 +166,7 @@
 			}
 			
 			.zootopia-two-panel__image {
-				background-image: url('https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2020/03/30/3ctwyynpaa_Julie_Larsen_Maher_1384_Tassler_Heather_Keeper_with_Ringtailed_Lemurs_MAD_BZ_06_30_16_1.jpg');
+				background-image: url('https://cdn.wcs.org/2020/03/30/3ctwyynpaa_Julie_Larsen_Maher_1384_Tassler_Heather_Keeper_with_Ringtailed_Lemurs_MAD_BZ_06_30_16_1.jpg');
 				
 				&__spacer {
 					min-height: 500px;

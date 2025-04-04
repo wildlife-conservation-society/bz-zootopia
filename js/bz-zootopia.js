@@ -41,7 +41,8 @@ $(function(){
 					$currentFeed.removeClass(activeClass).find('p a').text('Watch Now');
 					$('iframe',$currentFeed).remove();
 				} else {
-					$currentFeed.addClass(activeClass).find('p a').text('Close');
+					ga('send', 'event', 'Live Cameras', 'Watch Feed', selectedFeed);
+					$currentFeed.addClass(activeClass).find('p a').text('Stop Watching');
 					$('.zootopia-feeds__item__image',$currentFeed).prepend('<iframe allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="'+selectedFeed+'" id="ae_iframe_ywovcsny"></iframe>');
 					  
 					if (selectedFeed.includes('ozolio')) {
