@@ -1,0 +1,114 @@
+.grid-medium-half {
+	.card {
+		flex: 0 1 calc(50% - 15px);
+		margin: 0;
+		width: calc(50% - 30px);
+		-ms-flex: 0 1 calc(50% - 15px);
+		-webkit-flex: 0 1 calc(50% - 15px);
+		
+		@media all and (max-width:$break-tablet) {
+			flex: 0 1 100%;
+			max-width: 100%;
+			width: 100%;
+			-ms-flex: 0 1 100%;
+			-webkit-flex: 0 1 100%;
+		}
+		
+		&:nth-of-type(odd) {
+			margin: 0 30px 0 0;
+			
+			@media all and (max-width:$break-tablet) {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.cards {
+	.card {
+		a { 
+			p {
+				color: $black;
+			}
+		}
+		
+		&__desc {
+			padding: 30px;
+			
+			.btn-fill-tiger {
+				margin: 10px 0 0;
+			}
+			
+			.divided-after {
+				margin: 0 0 15px;
+				padding: 0;
+				
+				&:after {
+					display: none;
+				}
+			}
+			
+			p {
+				a {
+					color: $orange;
+					display: inline-block;
+					font-family: $font-brandon;
+					font-size: 1rem;
+					font-weight: bold;
+					letter-spacing: 1px;
+					line-height: 1rem;
+					margin: 25px 0 0;
+					text-transform: uppercase;
+					transition: $default-transition;
+					
+					&:hover {
+						color: $orange-hover;
+					}
+				}
+			}
+			
+			.type-caption {
+				color: $green;
+				font-family: $font-brandon;
+				font-size: 1.875rem;
+				font-weight: bold;
+				letter-spacing: 2px;
+				line-height: 1.875rem;
+				margin: 0 0 10px;
+				text-transform: uppercase;
+			}
+		}
+		
+		&__inner {
+			background: #fff;
+			
+			.figure {
+				overflow: hidden;
+				
+				&.aspect-1-1:before {
+				    padding-bottom: 70%;
+				}
+				
+				.image-fluid {
+					height: auto;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+
+.section:not(.fill-waves-light) {
+	.cards {
+		.card {
+			&__desc {
+				padding: 30px 0;
+				text-align: left;
+			}
+			
+			&__inner {
+				box-shadow: none;
+			}
+		}
+	}
+}

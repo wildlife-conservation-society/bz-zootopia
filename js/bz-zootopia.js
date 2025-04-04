@@ -19,6 +19,57 @@ $(function(){
 	    return params;
 	}
 	
+	// Toggle a live came feed 
+	$('.zootopia-feeds__item__toggle').on('click',function(e){
+		e.preventDefault();
+		toggleFeed($(this));
+	});
+	
+	function toggleFeed($el) {
+		var selectedFeed = $el.closest('.zootopia-feeds__item').attr('data-feed');
+		var activeClass = 'zootopia-feeds__item--active';
+		
+		if ($('.zootopia-feeds__more').length) {
+			$('.zootopia-feeds__more').remove();
+		}
+		
+		$('.zootopia-feeds__item').each(function(){
+			var $currentFeed = $(this);
+			
+			if ($currentFeed.attr('data-feed') == selectedFeed) {
+				if ($currentFeed.hasClass(activeClass)) {
+					$currentFeed.removeClass(activeClass).find('p a').text('Watch Now');
+					$('iframe',$currentFeed).remove();
+				} else {
+					ga('send', 'event', 'Live Cameras', 'Watch Feed', selectedFeed);
+					$currentFeed.addClass(activeClass).find('p a').text('Stop Watching');
+					$('.zootopia-feeds__item__image',$currentFeed).prepend('<iframe allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="'+selectedFeed+'" id="ae_iframe_ywovcsny"></iframe>');
+					  
+					if (selectedFeed.includes('ozolio')) {
+						$currentFeed.before('<div class="zootopia-feeds__more">Check out more content</div>');
+					}
+					  
+					setTimeout(function(){
+						var offset = 0;
+					
+						if ($('.zootopia-feeds__more').length) {
+							offset = $('.zootopia-feeds__more').offset();
+						} else {
+							offset = $currentFeed.offset();
+						}
+	
+						var navOffset = $('header.-active').outerHeight();
+						var scrollPos = offset.top - navOffset;
+						$('html, body').animate({ scrollTop: scrollPos }, 250);
+					},200);
+				 }
+			} else {
+				 $currentFeed.removeClass(activeClass).find('p a').text('Watch Now');
+				 $('iframe',$currentFeed).remove();
+			}
+		});
+	}
+	
 	// Scroll to the AQ Section
 	if (params['facility'] != undefined) {
 		var offset = 0;
@@ -100,7 +151,7 @@ $(function(){
 			$('.zootopia-zoodles__previous__container').html(html);
 			
 			if (n > 3) {
-				$('.zootopia-zoodles .btn-fill-tiger').closest('p').remnoveClass('--is-hidden');
+				$('.zootopia-zoodles .btn-fill-tiger').closest('p').removeClass('--is-hidden');
 			}
 		});;
 	}
@@ -116,13 +167,29 @@ $(function(){
 	// Hide the live cams overnight
 	function setFeedStatus() {
 		var hour = new Date().getHours();
-		var camOfflineClass = 'zootopia-cams--offline';
+		var $cams = $('.zootopia-cams');
+		var $feeds = $('.zootopia-feeds');
+		
+		if ($cams.length) {
+			var camOfflineClass = 'zootopia-cams--offline';
 								
-		if(hour >= 16 || hour <= 9) {
-			$('.zootopia-cams').addClass(camOfflineClass);
-		} else {
-			$('.zootopia-cams').removeClass(camOfflineClass);
-		}	
+			if(hour >= 16 || hour <= 9) {
+				$cams.addClass(camOfflineClass);
+			} else {
+				$cams.removeClass(camOfflineClass);
+			}		
+		}
+
+		if ($feeds.length) {
+			var camOfflineClass = 'zootopia-feeds--offline';
+								
+			if(hour >= 16 || hour <= 9) {
+				$feeds.addClass(camOfflineClass);
+			} else {
+				$feeds.removeClass(camOfflineClass);
+			}		
+		}
+		
 	}
 	
 	setFeedStatus();
