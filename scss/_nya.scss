@@ -1,0 +1,54 @@
+.nyaquarium {
+	.zootopia {
+		&-feeds {
+			&__item {
+				&__content {
+					a, h2, h3 {
+						font-family: $font-foundation;
+					}
+					
+					a {
+						color: $bright-blue;
+						
+						&:hover {
+							color: $bright-blue;
+							opacity: .8; 
+						}
+					}
+					
+					h2 {
+						color: $dark-navy;
+					}	
+					
+					h3 {
+						color: $blue;
+					}
+				}
+				
+				&__park {
+					background-color: $dark-navy;
+					font-family: $font-foundation;
+				}
+			}
+			
+			&__more {
+				background-image: url(https://cdn.wcs.org/2025/07/31/13/53/15/a4399338-480b-4c13-a6ee-c0f25c4f088a/live-cam-arrow-blue.jpg);
+				color: $bright-blue;
+			}
+		}
+		
+		&-intro {
+			h2, h3 {
+				font-family: $font-foundation;
+			}
+			
+			h2 {
+				color: $dark-navy;
+			}	
+			
+			h3 {
+				color: $blue;
+			}	
+		}
+	}
+}
