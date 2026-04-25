@@ -1,0 +1,98 @@
+.zootopia-learn {
+	background-color: $teal;
+	padding: 100px 0;
+	
+	.content-set__block__title {
+		h3 {
+			color: #fff;
+		}
+	}
+
+	&__content {
+		margin: 0;
+		position: absolute;
+		padding: 0 60px 0 0;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+
+		@media all and (max-width: $break-desktop) {
+			position: static;
+			margin-bottom: 20px;
+			padding: 20px;
+			transform: none;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 2.0625rem;
+			line-height: 2.0625rem;
+			margin: 10px 0;
+			font-family: "Brandon Grotesque",helvetica,arial,sans-serif;
+			font-weight: bold;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		
+		p {
+			color: white;
+			font-size: 1rem;
+			margin-bottom: 10px;
+		}
+	}
+
+	&:nth-of-type(1) {
+
+		@media all and (max-width: $break-desktop) {
+			.zootopia-learn__content {
+				margin-bottom: 0px;
+				padding: 0px;
+			}
+
+			.block {
+				padding: 10px 20px;
+			}
+
+			.content-set__block__title {
+				width: 100%;
+
+				h3 {
+					max-width: 400px;
+					font-size: 1.25rem;
+				}
+			}
+		}
+
+		@media all and (max-width:$break-tablet) {
+			.content-set__block__title {
+				margin-left: 40%;
+				width: auto;
+			}
+			
+			.block__image {
+				width: 40%;
+			}
+		}
+
+		@media all and (max-width:$break-mobile) {
+			.zootopia-learn__content {
+				margin-bottom: 0px;
+				padding: 0px;
+			}
+
+			.block {
+				margin-bottom: 20px;
+				padding: 0px 10px;
+			}
+
+			.content-set__block__title {
+				margin-left: 40%;
+				width: 40%;
+
+				h3 {
+					max-width: 200px;
+				}
+			}
+		}
+	}
+}
